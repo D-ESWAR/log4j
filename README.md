@@ -29,3 +29,10 @@ IN SAME FILE SOLR.LOG HAS THE PATH
 
 Answer:/admin/cores
 
+4) Viewing these log entries, what field name indicates some data entrypoint that you as a user could control?
+
+FINDING SOLR.LOG WE SEE MANY REQUESTS BUT NOT PARAMETER ARE NOT PASSED SO USER CAN DONE BUT ITS EMPTY params{}.
+
+Answer:params
+# Proof Of Concept
+
