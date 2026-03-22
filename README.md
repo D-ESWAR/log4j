@@ -109,7 +109,10 @@ Now access into the machine via SSH, momentarily become root and change the pass
 
 exit from the netcat
 **ssh solor@mahcineip**
-
-
+# Detection
+we alredy know the task 3 solr.log path var/solr/logs
+cat /var/solar/logs
+We can checks that our code is executed
+# Bypasses
 
 
