@@ -20,7 +20,12 @@ Answer: /var/solr/logs
    YOU CAN FIND MORE REQUESTS ARE IN GIVEN FILES (MENTION THE FILE NAME)
 
 Answer: solr.log
+
 3.  What "path" or URL endpoint is indicated in these repeated entries?
+  
 <img width="1140" height="112" alt="image" src="https://github.com/user-attachments/assets/51c6b290-96f0-45a7-a048-de7c098978ff" />
+
 IN SAME FILE SOLR.LOG HAS THE PATH
+
 Answer:/admin/cores
+
